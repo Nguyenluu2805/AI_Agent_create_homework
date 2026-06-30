@@ -1,0 +1,54 @@
+{
+    "subject": "python",
+    "chu_de": "Mảng và List",
+    "muc_tieu": "Sinh viên sẽ biết cách sử dụng các hàm cơ bản để thao tác với mảng trong Python.",
+    "danh_sach_bai_tap": [
+        {
+            "ten_bai": "Bài 1: Thêm phần tử vào list",
+            "muc_do": "Vận dụng cơ bản (1.5đ)",
+            "boi_canh_nghiep_vu": "Bạn là nhà phát triển cần thêm thông tin khách hàng vào danh sách.",
+            "code_loi_chua_sua": "```python\ncustomer_list = ['John Doe', 'Jane Smith']\ncustomer_list.append('Peter Jones')\nprint(customer_list)\n```",
+            "yeu_cau_chi_tiet": "[Vấn đề hiện tại]: Bạn cần thêm thông tin khách hàng mới vào danh sách.\n[Yêu cầu đầu ra]: 1. Đề xuất và giải thích cách thêm tên 'Alice Brown' vào cuối danh sách khách hàng.",
+            "tieu_chi_cham": [
+                "- 0.5đ: Sử dụng hàm append() chính xác để thêm phần tử mới vào list.\n- 0.5đ: In ra kết quả danh sách sau khi thêm phần tử mới."
+            ]
+        },
+        {
+            "ten_bai": "Bài 2: Xóa phần tử khỏi list",
+            "muc_do": "Vận dụng cơ bản (1.5đ)",
+            "boi_canh_nghiep_vu": "Bạn là quản lý cần xóa thông tin khách hàng không còn sử dụng dịch vụ.",
+            "code_loi_chua_sua": "```python\ncustomer_list = ['John Doe', 'Jane Smith', 'Peter Jones', 'Alice Brown']\nprint(customer_list)\ncustomer_list.remove('Peter Jones')\nprint(customer_list)\n```",
+            "yeu_cau_chi_tiet": "[Vấn đề hiện tại]: Bạn cần xóa thông tin khách hàng 'John Doe' khỏi danh sách.\n[Yêu cầu đầu ra]: 1. Đề xuất và giải thích cách sử dụng hàm remove() để xóa phần tử từ list.",
+            "tieu_chi_cham": [
+                "- 0.5đ: Sử dụng hàm remove() chính xác để xóa phần tử có giá trị 'John Doe'.\n- 0.5đ: In ra kết quả danh sách sau khi xóa phần tử."
+            ]
+        },
+        {
+            "ten_bai": "Bài 3: Chèn phần tử vào list",
+            "muc_do": "Vận dụng chuyên sâu (2đ)",
+            "boi_canh_nghiep_vu": "Bạn là nhà thiết kế cần chèn một thành viên mới vào giữa danh sách của đội ngũ phát triển.",
+            "yeu_cau_chi_tiet": "[Yêu cầu nghiệp vụ]: Chèn thành viên 'Bob' vào vị trí thứ 2 trong danh sách.\n[Ràng buộc & Bẫy dữ liệu]: Không có dữ liệu bất thường.\n[Yêu cầu đầu ra]: 1. Báo cáo phân tích và thiết kế giải pháp (Phân tích bài toán I/O, đề xuất ý tưởng).\n2. Triển khai code hoàn chỉnh chặn bẫy.",
+            "tieu_chi_cham": [
+                "- 0.5đ: Sử dụng hàm insert() chính xác để chèn phần tử vào vị trí chỉ mục.\n- 1đ: In ra kết quả danh sách sau khi chèn phần tử\n- 0.5đ: Code có thêm comment giải thích rõ ràng các bước thực hiện"
+            ]
+        },
+        {
+            "ten_bai": "Bài 4: Sắp xếp mảng",
+            "muc_do": "Phân tích (2đ)",
+            "boi_canh_nghiep_vu": "Bạn là chuyên viên marketing cần sắp xếp danh sách khách hàng theo thứ tự điểm số giảm dần.",
+            "yeu_cau_chi_tiet": "[Quy tắc nghiệp vụ]: Danh sách khách hàng được đánh giá dựa trên điểm số.\n[Ràng buộc & Bẫy dữ liệu]:  Có thể có trường hợp không có điểm số hoặc điểm số âm.\n[Yêu cầu đầu ra]: 1. Phân tích & Đề xuất (Xác định I/O, đề xuất tối thiểu 2 giải pháp khác nhau). 2. So sánh & Lựa chọn (Bảng so sánh ưu nhược trade-off, chốt chọn 1 giải pháp). 3. Thiết kế & Triển khai (Mã giả các bước, viết code hoàn chỉnh chặn bẫy).",
+            "tieu_chi_cham": [
+                "- 0.5đ: Xác định rõ ràng I/O.\n- 0.5đ: Đề xuất tối thiểu 2 giải pháp khác nhau.\n- 1đ: So sánh & Lựa chọn giải pháp phù hợp, trình bày trade-off rõ ràng.\n- 0.5đ: Triển khai code hoàn chỉnh chặn bẫy dữ liệu."
+            ]
+        },
+        {
+            "ten_bai": "Bài 5: Tìm kiếm phần tử trong list",
+            "muc_do": "Sáng tạo (3đ)",
+            "boi_canh_nghiep_vu": "Bạn là nhà phát triển cần thiết kế một ứng dụng tìm kiếm thông tin khách hàng dựa trên tên.",
+            "yeu_cau_chi_tiet": "[Ràng buộc kỹ thuật]: Sử dụng list comprehension để tối ưu hóa quá trình tìm kiếm.\n[Yêu cầu đầu ra]: 1. Thiết kế kiến trúc (Xác định các module và luồng data flow).\n2. Sản phẩm hoàn chỉnh (Source code xử lý mượt mọi ngoại lệ/bẫy dữ liệu, giao tiếp thân thiện).",
+            "tieu_chi_cham": [
+                "- 1đ: Xây dựng kiến trúc ứng dụng logic và hiệu quả.\n- 1đ: Source code sử dụng list comprehension để tìm kiếm phần tử trong list.\n- 1đ: Test case hoàn chỉnh, xử lý mượt mọi ngoại lệ/bẫy dữ liệu, giao tiếp thân thiện."
+            ]
+        }
+    ]
+}

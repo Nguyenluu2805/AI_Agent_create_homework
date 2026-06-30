@@ -1,0 +1,11 @@
+Chương về Chuỗi (String) và Xử lý Chuỗi trong Python:
+Chuỗi trong Python (String) được đặt trong dấu nháy đơn ('...') hoặc nháy kép ("..."). Chuỗi là kiểu dữ liệu bất biến (immutable).
+Các hàm và phương thức xử lý chuỗi cốt lõi bao gồm:
+- split(separator): Chia chuỗi thành một danh sách (list) các chuỗi con dựa trên ký tự phân tách.
+- join(iterable): Nối các phần tử của một danh sách thành một chuỗi duy nhất bằng ký tự nối.
+- strip(): Loại bỏ khoảng trắng thừa ở đầu và cuối chuỗi.
+- replace(old, new): Thay thế tất cả các lần xuất hiện của chuỗi old bằng chuỗi new.
+- find(sub): Tìm vị trí chỉ mục xuất hiện đầu tiên của chuỗi con sub, trả về -1 nếu không tìm thấy.
+- lower() và upper(): Chuyển đổi toàn bộ chuỗi thành chữ thường hoặc chữ hoa.
+- count(sub): Đếm số lần xuất hiện của chuỗi con sub trong chuỗi.
+Khi thiết kế bài tập về String, giảng viên cần yêu cầu sinh viên sử dụng kết hợp các phương thức chuỗi trên, xử lý lập chỉ mục chuỗi (slicing) và sử dụng cấu trúc điều kiện để chuẩn hóa chuỗi dữ liệu đầu vào.

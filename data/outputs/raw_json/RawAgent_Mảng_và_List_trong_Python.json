@@ -1,0 +1,54 @@
+{
+    "subject": "python",
+    "chu_de": "Mảng và List trong Python",
+    "muc_tieu": "Học viên sẽ hiểu được cách sử dụng các hàm cơ bản của List để xử lý dữ liệu.",
+    "danh_sach_bai_tap": [
+        {
+            "ten_bai": "Bài 1: Thêm phần tử vào cuối List",
+            "muc_do": "Vận dụng cơ bản (1.5đ)",
+            "boi_canh_nghiep_vu": "Một cửa hàng muốn lưu trữ danh sách các sản phẩm bán chạy.",
+            "code_loi_chua_sua": "```python\nlist_san_pham = ['Áo thun', 'Quần jean']\nprint(list_san_pham)\n```",
+            "yeu_cau_chi_tiet": "[Vấn đề hiện tại]: Danh sách sản phẩm chưa bao gồm tất cả các sản phẩm.\n[Yêu cầu đầu ra]: 1. Chỉ ra đoạn code sai bằng dữ liệu test case.\n2. Source code đã sửa chính xác để thêm phần tử 'Giày dép' vào cuối danh sách.",
+            "tieu_chi_cham": [
+                "- 0.5đ: Đưa ra đoạn code sửa lỗi chính xác."
+            ]
+        },
+        {
+            "ten_bai": "Bài 2: Chèn phần tử vào vị trí cụ thể trong List",
+            "muc_do": "Vận dụng cơ bản (1.5đ)",
+            "boi_canh_nghiep_vu": "Một thư viện sách cần sắp xếp danh sách các đầu sách theo thứ tự bảng chữ cái.",
+            "code_loi_chua_sua": "```python\nlist_sach = ['C++', 'Python', 'Java']\nprint(list_sach)\n```",
+            "yeu_cau_chi_tiet": "[Vấn đề hiện tại]: Danh sách sách chưa được sắp xếp theo thứ tự bảng chữ cái.\n[Yêu cầu đầu ra]: 2. Sửa lỗi/Vá code để chèn phần tử 'HTML' vào vị trí giữa danh sách.",
+            "tieu_chi_cham": [
+                "- 0.5đ: Đưa ra đoạn code sửa lỗi chính xác."
+            ]
+        },
+        {
+            "ten_bai": "Bài 3: Xóa và sắp xếp List",
+            "muc_do": "Vận dụng chuyên sâu (2đ)",
+            "boi_canh_nghiep_vu": "Một ứng dụng quản lý sinh viên cần xóa sinh viên đã tốt nghiệp và sắp xếp danh sách theo tên.",
+            "yeu_cau_chi_tiet": "[Yêu cầu nghiệp vụ]: 1. Xóa sinh viên có tên là 'Nguyen Van A' khỏi danh sách.\n2. Sắp xếp lại danh sách theo thứ tự bảng chữ cái.\n[Ràng buộc & Bẫy dữ liệu]: Chú ý trường hợp nhập thiếu thông tin hoặc lỗi format dữ liệu.\n[Yêu cầu đầu ra]: 1. **Viết báo cáo phân tích**: Phân tích yêu cầu và thiết kế giải pháp để xóa và sắp xếp danh sách sinh viên.\n2. Hiển thị danh sách sinh viên đã được xóa và sắp xếp.",
+            "tieu_chi_cham": [
+                "- 0.5đ: Xóa thành công sinh viên 'Nguyen Van A'.\n- 1đ: Sắp xếp danh sách theo thứ tự bảng chữ cái."
+            ]
+        },
+        {
+            "ten_bai": "Bài 4: Tìm kiếm phần tử trong List",
+            "muc_do": "Phân tích (2đ)",
+            "boi_canh_nghiep_vu": "Một hệ thống thư viện cần tìm kiếm sách theo tên.",
+            "yeu_cau_chi_tiet": "[Quy tắc nghiệp vụ]: 1. Tìm kiếm phần tử trong List.\n[Ràng buộc & Bẫy dữ liệu]: Kiểm tra trường hợp tìm kiếm không tìm thấy kết quả.\n[Yêu cầu đầu ra]: 1. Hiển thị sách đã được tìm thấy (nếu có).\n2. In thông báo 'Không tìm thấy sách' nếu không tìm thấy.\n3. **Đề xuất tối thiểu hai giải pháp khác nhau để thực hiện yêu cầu tìm kiếm**. **Lập bảng so sánh các giải pháp về ưu nhược điểm và hiệu suất.",
+            "tieu_chi_cham": [
+                "- 1đ: Viết hàm tìm kiếm phần tử trong List.\n- 1đ: Kiểm tra trường hợp tìm kiếm không tìm thấy kết quả.\n- 1đ: Đề xuất hai giải pháp khác nhau.\n- 1đ: Lập bảng so sánh các giải pháp về ưu nhược điểm."
+            ]
+        },
+        {
+            "ten_bai": "Bài 5: Tạo List từ chuỗi",
+            "muc_do": "Sáng tạo (3đ)",
+            "boi_canh_nghiep_vu": "Một ứng dụng chat cần phân tích dòng tin nhắn để gửi cho người dùng đúng nội dung.",
+            "yeu_cau_chi_tiet": "[Ràng buộc kỹ thuật]: 1. Tìm hiểu cách tạo List từ chuỗi.\n2. **Thiết kế kiến trúc**: Mô tả luồng dữ liệu khi tách chuỗi thành List.\n[Yêu cầu đầu ra]: 1. Viết code nhận vào một chuỗi gồm các từ và tách nó thành danh sách các từ riêng biệt.",
+            "tieu_chi_cham": [
+                "- 1đ: Tạo hàm phân tích chuỗi thành List.\n- 1đ: Xử lý chuỗi có dấu cách thừa.\n- 1đ: Xử lý chuỗi chứa ký tự đặc biệt."
+            ]
+        }
+    ]
+}

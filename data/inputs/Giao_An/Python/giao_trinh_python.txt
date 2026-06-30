@@ -1,0 +1,9 @@
+Chương về Mảng và List trong Python:
+Mảng trong Python thường được biểu diễn bằng kiểu dữ liệu List. List có thể chứa các phần tử có kiểu dữ liệu khác nhau.
+Các hàm xử lý mảng cốt lõi bao gồm:
+- append(x): Thêm phần tử x vào cuối list.
+- insert(i, x): Chèn phần tử x vào vị trí chỉ mục i.
+- pop(i): Xóa và trả về phần tử tại vị trí i. Nếu không truyền i, sẽ xóa phần tử cuối cùng.
+- remove(x): Xóa phần tử đầu tiên có giá trị bằng x.
+- sort(): Sắp xếp các phần tử trong list theo thứ tự tăng dần.
+Khi thiết kế bài tập về List, giảng viên phải yêu cầu sinh viên kết hợp vòng lặp (for/while) để duyệt qua các phần tử và xử lý điều kiện (if/else) nhằm tối ưu hóa thuật toán.

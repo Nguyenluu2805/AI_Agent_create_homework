@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Local databases (large binary files generated dynamically)
+chroma_store/
+data/chroma_db/
+
+# Output folder for generated files (optional, but usually local outputs aren't committed)
+# data/outputs/
+
+# OS specific files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,59 @@
+{
+    "subject": "python",
+    "chu_de": "Quản Lý Kho Hàng Cho Website Bán Quần Áo",
+    "muc_tieu": "Học viên hiểu rõ cách sử dụng List và các hàm cơ bản để quản lý thông tin về sản phẩm trong kho hàng cho một website bán quần áo.",
+    "danh_sach_bai_tap": [
+        {
+            "ten_bai": "Bài 1: Xây Dựng Danh Sách Sản Phẩm",
+            "muc_do": "Vận dụng cơ bản (1.5đ)",
+            "boi_canh_nghiep_vu": "Bạn là lập trình viên web cho một website bán quần áo online. Website cần hệ thống quản lý danh sách sản phẩm trong kho hàng. ",
+            "yeu_cau_chi_tiet": "Hãy viết code để tạo list `danh_sach_san_pham` chứa thông tin về mỗi sản phẩm: tên, mã sản phẩm (không được trùng), giá (số dương) và số lượng hiện có.",
+            "tieu_chi_cham": [
+                "- 0.5đ: Tạo được danh sách `danh_sach_san_pham`.",
+                "- 1đ: Mỗi phần tử trong danh sách là một dictionary với thông tin tên, mã sản phẩm, giá và số lượng.",
+                "- 0.5đ: Kiểm tra xem mã sản phẩm không trùng lặp."
+            ]
+        },
+        {
+            "ten_bai": "Bài 2: Thêm Sản Phẩm Mới",
+            "muc_do": "Vận dụng cơ bản (1.5đ)",
+            "boi_canh_nghiep_vu": "Một khách hàng đặt mua một sản phẩm mới. ",
+            "yeu_cau_chi_tiet": "Hãy viết code thêm một sản phẩm mới vào danh sách `danh_sach_san_pham`. Kiểm tra xem mã sản phẩm đã tồn tại hay chưa trước khi thêm vào. Nếu mã sản phẩm trùng lặp, hãy yêu cầu nhập lại.",
+            "tieu_chi_cham": [
+                "- 0.5đ: Kiểm tra xem sản phẩm có tồn tại hay không.",
+                "- 1đ: Thêm thành công sản phẩm mới vào danh sách `danh_sach_san_pham`."
+            ]
+        },
+        {
+            "ten_bai": "Bài 3: Xóa Sản Phẩm Hết Hạn Sử Dụng",
+            "muc_do": "Vận dụng chuyên sâu (2đ)",
+            "boi_canh_nghiep_vu": "Một số sản phẩm đã hết hạn sử dụng và cần được xóa khỏi kho hàng.",
+            "yeu_cau_chi_tiet": "Hãy viết code xóa một sản phẩm từ danh sách `danh_sach_san_pham` dựa trên mã sản phẩm. Kiểm tra xem sản phẩm có tồn tại hay không trước khi xóa.",
+            "tieu_chi_cham": [
+                "- 1đ: Kiểm tra xem sản phẩm có tồn tại hay không.",
+                "- 1đ: Xóa thành công sản phẩm từ danh sách `danh_sach_san_pham`."
+            ]
+        },
+        {
+            "ten_bai": "Bài 4: Tìm Sản Phẩm Bán Chạy",
+            "muc_do": "Phân tích (2đ)",
+            "boi_canh_nghiep_vu": "Bạn cần tìm hiểu sản phẩm bán chạy nhất trong tháng qua để đưa ra chiến lược marketing.",
+            "yeu_cau_chi_tiet": "Hãy viết code sử dụng một thuật toán tìm kiếm phù hợp (ví dụ: binary search) để tìm sản phẩm có giá trị bán nhiều nhất trong danh sách `danh_sach_san_pham`. In tên và mã sản phẩm của sản phẩm bán chạy nhất.",
+            "tieu_chi_cham": [
+                "- 1đ: So sánh các thuật toán tìm kiếm phù hợp (ví dụ: linear search, binary search) và lựa chọn giải pháp hiệu quả nhất cho bài toán này. ",
+                "- 1đ: Viết code sử dụng thuật toán được chọn để tìm sản phẩm bán chạy nhất trong danh sách."
+            ]
+        },
+        {
+            "ten_bai": "Bài 5: Xây Dựng Hệ Thống Quản Lý Kho Hàng Phức Tạp",
+            "muc_do": "Sáng tạo (3đ)",
+            "boi_canh_nghiep_vu": "Website cần thêm nhiều tính năng quản lý kho hàng như phân loại sản phẩm, liên kết sản phẩm phụ kiện và báo cáo tồn kho.",
+            "yeu_cau_chi_tiet": "Hãy mô tả cấu trúc dữ liệu và logic flow của hệ thống quản lý kho hàng phức tạp hơn. Bao gồm: 1) Danh sách sản phẩm với các thuộc tính: tên, mã sản phẩm, giá, số lượng, danh mục (ví dụ: quần áo nam/nữ), trạng thái (có sẵn/hết hàng); 2) Hệ thống liên kết sản phẩm phụ kiện; 3) Báo cáo tồn kho theo danh mục.",
+            "tieu_chi_cham": [
+                "- 1đ: Mô tả cấu trúc dữ liệu cho hệ thống quản lý kho hàng phức tạp hơn. ",
+                "- 1đ: Mô tả logic flow của các chức năng (Thêm sản phẩm, xóa sản phẩm, báo cáo tồn kho) trong hệ thống.",
+                "- 1đ: Nêu ra các sự kiện/logic cần thiết khi liên kết sản phẩm phụ kiện."
+            ]
+        }
+    ]
+}
