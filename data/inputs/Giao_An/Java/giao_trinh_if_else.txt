@@ -1,0 +1,74 @@
+CHỦ ĐỀ: CẤU TRÚC ĐIỀU KIỆN IF-ELSE TRONG JAVA
+
+I. Cú lừa 0đ và nhiệm vụ của gã lập trình viên tỉnh táo
+Bối cảnh thực tế: Rika đang là kỹ sư Backend tại Shopee. Đúng 0h ngày 12/12, phòng Marketing tung chiến dịch chấn động: "SĂN DEAL 0 ĐỒNG – CHỈ TRONG 1 PHÚT". Sếp bước đến bàn của Rika và đưa ra yêu cầu ngắn gọn:
+- Nếu đơn hàng từ 200.000đ trở lên và khách có mã DEAL0D, hãy trừ sạch tiền, cho họ thanh toán 0 đồng.
+- Nếu đơn hàng cũng từ 200.000đ nhưng khách chỉ có mã SALE100K, hãy giảm cho họ 100.000đ.
+- Còn lại? Không giảm gì cả, thu đủ tiền!
+
+Rika chuẩn bị gõ code, nhưng mồ hôi chảy ròng ròng vì nhận ra:
+- Nếu viết sai logic: Khách dùng mã SALE100K mà máy tính lại lỡ tay trừ sạch về 0đ -> Công ty lỗ hàng tỷ đồng sau 1 phút. Sếp sẽ mời Rika lên uống trà và thu hồi tháng lương cuối năm ngay lập tức!
+- Nếu máy tính bị "ngáo": Khách có mã DEAL0D xịn xò nhưng máy báo "Vẫn phải trả 100k" -> Khách ức chế, xóa app, lên Facebook bóc phốt Shopee lừa đảo.
+Câu hỏi đặt ra: Làm sao để máy tính của chúng ta không bị "lú" giữa đống mã giảm giá đó? Làm sao để nó biết chính xác khi nào thì cho khách ăn mừng với Deal 0đ, khi nào thì chỉ giảm nhẹ 100k?
+
+II. “Bộ não ra quyết định” đằng sau nút thanh toán
+Để giải quyết bài toán "0đ hay 100k" mà Sếp giao, Rika không thể bảo máy tính: "Này, cứ nhìn cái mã mà giảm nhé". Máy tính rất giỏi tính toán nhưng nó cực kỳ máy móc. Nó cần một lộ trình logic rõ ràng, không được mập mờ.
+Luồng suy nghĩ của máy tính:
+- Những "chốt chặn" điều kiện: Trước khi trừ tiền, máy tính phải tự đặt ra 2 câu hỏi quan trọng:
+  1. Đơn hàng có đủ lớn không? (Phải từ 200.000đ trở lên mới nói chuyện tiếp).
+  2. Khách đang cầm mã gì? (DEAL0D hay SALE100K).
+- Ngã rẽ của số phận: dữ liệu của khách hàng đang chạy trên một con đường cao tốc và gặp một ngã ba rẽ nhánh:
+  * Nhánh 1 (Ưu tiên cao nhất): Nếu thỏa mãn cả 2 điều kiện (Đơn >= 200k VÀ có mã DEAL0D) -> Số tiền phải trả = 0.
+  * Nhánh 2 (Ưu tiên vừa): Nếu đơn >= 200k nhưng khách chỉ có mã SALE100K -> Số tiền phải trả = Tổng tiền - 100k.
+  * Nhánh 3 (Trường hợp còn lại): Nếu đơn hàng dưới 200k, hoặc khách không có mã nào -> Giữ nguyên giá gốc.
+
+III. “Bộ điều hướng logic” if – else – if trong Java
+Để hiện thực hóa sơ đồ tư duy phía trên, Java cung cấp cho chúng ta cấu trúc If-Else-If Ladder (Cầu thang điều kiện). Nó giống như hệ thống phân loại hàng hóa tự động: Kiện hàng chạy qua các cảm biến, cảm biến nào thấy khớp thì kiện hàng rẽ vào kho đó và dừng lại.
+Cú pháp trong Java:
+if (điều_kiện_1) {
+    // Nếu ĐÚNG: Thực thi lệnh và thoát khỏi hệ thống lọc
+} else if (điều_kiện_2) {
+    // Nếu điều kiện 1 SAI nhưng điều kiện 2 ĐÚNG: Thực thi lệnh
+} else {
+    // Lưới hứng: Nếu tất cả các tầng trên đều không khớp
+}
+
+Sức mạnh và Lưu ý:
+1. Tính duy nhất: Tại một thời điểm, máy tính chỉ chọn duy nhất một nhánh để thực hiện, tránh áp dụng chồng chéo.
+2. Toán tử && (VÀ): Kết hợp nhiều điều kiện đồng thời.
+3. Quy tắc bất di bất dịch: Đừng bao giờ dùng == để so sánh Chuỗi (String) trong Java! Luôn dùng voucher.equals("DEAL0D") thay vì voucher == "DEAL0D" để tránh so sánh địa chỉ bộ nhớ.
+
+IV. Hệ thống tính phí vận chuyển "Shoppe Express"
+Ví dụ thực tế: Rika xây dựng module tính phí giao hàng:
+1. Đơn hàng từ 2.000.000đ trở lên: Miễn phí vận chuyển (0đ).
+2. Đơn hàng từ 1.000.000đ đến dưới 2.000.000đ: Phí vận chuyển là 20.000đ.
+3. Đơn hàng từ 500.000đ đến dưới 1.000.000đ: Phí vận chuyển là 40.000đ.
+4. Đơn hàng dưới 500.000đ: Phí vận chuyển mặc định là 60.000đ.
+
+V. Giải cứu chiến dịch "Săn Deal 0 Đồng"
+Code thực thi trong Java giải quyết triệt để tình huống ở phần I:
+```java
+public class ShopeeDeal {
+    public static void main(String[] args) {
+        double orderValue = 250000;
+        String voucher = "DEAL0D";
+        double payment;
+
+        if (orderValue >= 200000 && voucher.equals("DEAL0D")) {
+            payment = 0;
+            System.out.println("Chúc mừng! Bạn được giảm giá 0đ thanh toán.");
+        } else if (orderValue >= 200000 && voucher.equals("SALE100K")) {
+            payment = orderValue - 100000;
+            System.out.println("Bạn được giảm 100.000đ. Số tiền cần trả: " + payment);
+        } else {
+            payment = orderValue;
+            System.out.println("Không áp dụng voucher. Số tiền cần trả: " + payment);
+        }
+    }
+}
+```
+
+VI. Tổng kết và lưu ý sống còn
+- Cấu trúc if-else-if giống bộ lọc nhiều tầng.
+- Luôn kiểm tra điều kiện ngặt nghèo nhất ở tầng trên cùng (if).
+- Tuyệt đối dùng .equals() so sánh chuỗi Java. Luôn dùng dấu ngoặc nhọn { } bao bọc code.

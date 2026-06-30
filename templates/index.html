@@ -205,6 +205,7 @@
             display: flex;
             gap: 12px;
             margin-bottom: 16px;
+            align-items: flex-end;
         }
 
         .input-prompt {
@@ -218,6 +219,8 @@
             font-size: 15px;
             outline: none;
             transition: var(--transition-smooth);
+            resize: vertical;
+            min-height: 52px;
         }
 
         .input-prompt:focus {
@@ -567,17 +570,17 @@
         <div class="generator-box">
             <div class="generator-title">Yêu cầu thiết kế học liệu tự động</div>
             <div class="input-group">
-                <input type="text" class="input-prompt" id="promptInput" placeholder="Nhập yêu cầu ví dụ: Bài tập String trong Python hoặc Bài đọc về cấu trúc rẽ nhánh if-else trong Java...">
-                <button class="btn-generate" id="btnGenerate">
+                <textarea class="input-prompt" id="promptInput" rows="2" placeholder="Nhập yêu cầu chi tiết hoặc paste nội dung quy chuẩn bài tập/bài đọc tại đây... (Nhấn Enter để biên soạn, Shift+Enter để xuống dòng)"></textarea>
+                <button class="btn-generate" id="btnGenerate" style="height: 48px;">
                     <span>Biên Soạn</span>
                 </button>
             </div>
             
             <div class="suggestions">
+                <span class="suggestion-pill" data-prompt="Thiết kế bài đọc Storytelling Java if-else: Câu chuyện Rika Shopee xử lý logic giảm giá DEAL0D (0đ) và SALE100K (100k) cho đơn hàng >= 200k. Phân chia rõ rệt 7 phần La Mã I-VII và câu hỏi phân hóa 3 cấp độ.">Bài đọc Java if-else (Shopee Rika)</span>
                 <span class="suggestion-pill" data-prompt="Bài tập String trong Python">Bài tập String Python</span>
                 <span class="suggestion-pill" data-prompt="Bài đọc về cấu trúc rẽ nhánh if-else trong Java">Bài đọc rẽ nhánh if-else Java</span>
                 <span class="suggestion-pill" data-prompt="Bài tập Mảng và List trong Python">Bài tập Mảng và List Python</span>
-                <span class="suggestion-pill" data-prompt="Bài đọc về xử lý ngoại lệ Exception trong Java">Bài đọc Exception Java</span>
             </div>
         </div>
 
@@ -926,10 +929,13 @@
             }
         });
         
-        // Nhấn Enter để gửi
+        // Nhấn Enter để gửi (Shift+Enter để xuống dòng)
         promptInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' && !btnGenerate.disabled) {
-                btnGenerate.click();
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault(); // Tránh chèn dòng mới khi chỉ bấm Enter
+                if (!btnGenerate.disabled) {
+                    btnGenerate.click();
+                }
             }
         });
     </script>
