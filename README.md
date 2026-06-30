@@ -118,14 +118,33 @@ AI_Agent/
 
 ## Hướng dẫn cài đặt và vận hành
 
-### 1. Cài đặt thư viện phụ thuộc
-Kích hoạt môi trường ảo (venv) của bạn và tiến hành cài đặt các package:
+### 1. Tải mã nguồn về máy mới (Clone)
+Mở cửa sổ terminal và tải dự án về máy:
+```bash
+git clone https://github.com/Nguyenluu2805/AI_Agent_create_homework.git
+cd AI_Agent_create_homework
+```
+
+### 2. Thiết lập môi trường ảo (Virtual Environment)
+*   **Trên Windows:**
+    ```bash
+    python -m venv venv
+    .\venv\Scripts\activate
+    ```
+*   **Trên macOS / Linux:**
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
+
+### 3. Cài đặt các thư viện phụ thuộc
+Đảm bảo bạn đang ở trong môi trường ảo đã được kích hoạt, tiến hành chạy lệnh:
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Khởi động Ollama Local
-Đảm bảo bạn đã cài đặt Ollama và tải model `gemma2` về máy local:
+### 4. Khởi động bộ não AI Local (Ollama)
+Tải và cài đặt Ollama từ [ollama.com](https://ollama.com), sau đó khởi động model `gemma2`:
 ```bash
 ollama run gemma2
 ```
